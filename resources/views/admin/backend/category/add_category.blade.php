@@ -22,8 +22,10 @@
   <div class="card">
 							<div class="card-body p-4">
 								<h5 class="mb-4">Add Category </h5>
-								<form  id="myForm"   action=" "   method="post"    class="row g-3">
-									<div class=" form-group col-md-6">
+								<form  id="myForm"   action=" {{route('store.category')}}"   method="post"    class="row g-3">
+                                @csrf
+									
+                                <div class=" form-group col-md-6">
 										<label for="input1" class="form-label">Category  Name</label>
 										<input type="text" name="category_name"     class="form-control" id="input1" >
 									</div>
@@ -39,7 +41,7 @@
                                     alt="Admin" class="  rounded-circle p-1 bg-primary" width="80">
                                      </div>   
 
-									
+							      <!--   $dd($request)  -->
                                     <div class="col-md-12">
 										<div class="d-md-flex d-grid align-items-center gap-3">
 											<button type="submit" class="btn btn-primary px-4">Save</button>
@@ -100,7 +102,7 @@ $(document).ready(function(){
 $('#image').change(function(e){
     var reader = new FileReader();
     reader.onload = function(e){
-        $('.showImage').attr('src', e.target.result);
+        $('#showImage').attr('src', e.target.result);
     }
     reader.readAsDataURL(e.target.files[0]);
     console.log(event.target.files[0].name);

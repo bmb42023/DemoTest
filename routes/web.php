@@ -70,17 +70,19 @@ Route::middleware('auth','roles:admin')->group(function(){
     Route::post('/admin/password/update', [AdminController::class, 
     'AdminPasswordUpdate'])->name('admin.password.update');
     
+
    Route::controller(CategoryController::class)->group(function(){
     Route::get('/all/category','AllCategory')->name('all.category');
-    Route::get('/add/category','AddCategory')->name('add.category');
-
+    Route::get('/add/category','AddCategory')->name('add.category'); 
+   // Route::get('/store/category','AddCategoryForm')->name('add.category'); 
+    Route::post('/store/category','StoreCategory')->name('store.category');
    });
-   // Instructor Route 
+//  aLL routes for instrucror
+
    Route::controller(AdminController::class)->group(function(){
     Route::get('/all/instructor','Allinstructor')->name('all.instructor');
-    Route::get('/add/category','AddCategory')->name('add.category');
-
-   });
+    Route::post('/update/user/statis','UpdateUserStatus')->name('update.user.status');
+});
 
 
    // Route::get('/admin/change/password', [AdminController::class, 
@@ -92,6 +94,14 @@ Route::middleware('auth','roles:admin')->group(function(){
 //End of admin group
 Route::get('/admin/login', [AdminController::class, 
 'AdminLogin'])->name('admin.login');
+// This mean u access  wtihout login 
+Route::get('/became/instructor', [AdminController::class, 
+'BecameInstructor'])->name('became.instructor');
+Route::post('/instructor/register', [AdminController::class, 
+'InstructorRegister'])->name('instructor.register');
+
+
+
 Route::get('/admin/profile', [AdminController::class, 
 'AdminProfile'])->name('admin.profile');
 // instructor Group Middleware  

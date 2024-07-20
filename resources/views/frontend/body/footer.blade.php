@@ -1,7 +1,7 @@
 <section class="footer-area pt-100px">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 responsive-column-half">
+            <div class="col-lg-3   responsive-column-half ">
                 <div class="footer-item">
                     <a href="index.html">
                         <img src="images/logo.png" alt="footer logo" class="footer__logo">
@@ -20,21 +20,21 @@
                     </ul>
                 </div><!-- end footer-item -->
             </div><!-- end col-lg-3 -->
-            <div class="col-lg-3 responsive-column-half">
+            <div class="col-lg-3   responsive-column-half">
                 <div class="footer-item">
                     <h3 class="fs-20 font-weight-semi-bold">Company</h3>
                     <span class="section-divider section--divider"></span>
                     <ul class="generic-list-item">
                         <li><a href="#">About us</a></li>
                         <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Become a Teacher</a></li>
+                        <li><a href="{{route('became.instructor')}}">Become a Teacher</a></li>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </div><!-- end footer-item -->
             </div><!-- end col-lg-3 -->
-            <div class="col-lg-3 responsive-column-half">
+            <div class="col-lg-3   responsive-column-half">
                 <div class="footer-item">
                     <h3 class="fs-20 font-weight-semi-bold">Courses</h3>
                     <span class="section-divider section--divider"></span>

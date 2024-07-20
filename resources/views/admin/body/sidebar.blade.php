@@ -18,7 +18,22 @@
                 <div class="menu-title">Admin Dashbaord</div>
             </a>
         </li>
-  
+     <!-- now not needed  14.2   <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='bx bx-home-alt'></i>
+                </div>
+                <div class="menu-title">Dashboard</div>
+            </a>
+            <ul>
+                <li> <a href="index.html"><i class='bx bx-radio-circle'></i>Default</a>
+                </li>
+                <li> <a href="index2.html"><i class='bx bx-radio-circle'></i>Alternate</a>
+                </li>
+                <li> <a href="index3.html"><i class='bx bx-radio-circle'></i>Graphical</a>
+                </li>
+            </ul>
+        </li>
+    -->
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
@@ -26,17 +41,10 @@
                 <div class="menu-title">Application</div>
             </a>
             <ul>
-                <li> <a href="app-emailbox.html"><i class='bx bx-radio-circle'></i>Email</a>
+               
+                <li> <a href="app-file-manager.html"><i class='bx bx-radio-circle'></i> Manage  Instructor</a>
                 </li>
-                <li> <a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>Chat Box</a>
-                </li>
-                <li> <a href="app-file-manager.html"><i class='bx bx-radio-circle'></i>File Manager</a>
-                </li>
-                <li> <a href="app-contact-list.html"><i class='bx bx-radio-circle'></i>Contatcs</a>
-                </li>
-                <li> <a href="app-to-do.html"><i class='bx bx-radio-circle'></i>Todo List</a>
-                </li>
-                <li> <a href="app-invoice.html"><i class='bx bx-radio-circle'></i>Invoice</a>
+                 <li> <a href="app-invoice.html"><i class='bx bx-radio-circle'></i>Invoice</a>
                 </li>
                 <li> <a href="app-fullcalender.html"><i class='bx bx-radio-circle'></i>Calendar</a>
                 </li>
@@ -75,40 +83,10 @@
                 <div class="menu-title">Manage Instructor</div>
             </a>
             <ul>
-                <li> <a href="{{route('all.instructor')}}"><i class='bx bx-radio-circle'></i>All  Instructor</a>
+                <li> <a href="{{route('all.instructor')}}"><i class='bx bx-radio-circle'></i>All Instructor</a>
                 </li>
                 
-            <!--    <li> <a href="component-badges.html"><i class='bx bx-radio-circle'></i>Badges</a>
-                </li>
-                <li> <a href="component-buttons.html"><i class='bx bx-radio-circle'></i>Buttons</a>
-                </li>
-                <li> <a href="component-cards.html"><i class='bx bx-radio-circle'></i>Cards</a>
-                </li>
-                <li> <a href="component-carousels.html"><i class='bx bx-radio-circle'></i>Carousels</a>
-                </li>
-                <li> <a href="component-list-groups.html"><i class='bx bx-radio-circle'></i>List Groups</a>
-                </li>
-                <li> <a href="component-media-object.html"><i class='bx bx-radio-circle'></i>Media Objects</a>
-                </li>
-                <li> <a href="component-modals.html"><i class='bx bx-radio-circle'></i>Modals</a>
-                </li>
-                <li> <a href="component-navs-tabs.html"><i class='bx bx-radio-circle'></i>Navs & Tabs</a>
-                </li>
-                <li> <a href="component-navbar.html"><i class='bx bx-radio-circle'></i>Navbar</a>
-                </li>
-                <li> <a href="component-paginations.html"><i class='bx bx-radio-circle'></i>Pagination</a>
-                </li>
-                <li> <a href="component-popovers-tooltips.html"><i class='bx bx-radio-circle'></i>Popovers & Tooltips</a>
-                </li>
-                <li> <a href="component-progress-bars.html"><i class='bx bx-radio-circle'></i>Progress</a>
-                </li>
-                <li> <a href="component-spinners.html"><i class='bx bx-radio-circle'></i>Spinners</a>
-                </li>
-                <li> <a href="component-notifications.html"><i class='bx bx-radio-circle'></i>Notifications</a>
-                </li>
-                <li> <a href="component-avtars-chips.html"><i class='bx bx-radio-circle'></i>Avatrs & Chips</a>
-                </li>
-            -->
+          
             </ul>
         </li>
        <!-- <li>

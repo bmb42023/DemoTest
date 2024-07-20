@@ -153,9 +153,79 @@ class AdminController extends Controller
             'alert-type' => 'success');
   return back()->with($notification);
 
-}   public function AllInstructor(){
+}
 
+public function BecameInstructor(){
+    return view('frontend.instructor.reg_instructor');
+    //return view('frontend.register_instruction');
+}
+public function InstructorRegister(Request $request){
+    $request-> validate([
+        'name'=>['required','string','max:255'],
+        'email'=>['required','unique:users'],
+    ]);
+    User::insert([
+        'name'=> $request->name,
+        'username'=> $request->username,
+        'email'=> $request->email,
+        'phone'=> $request->phone,
+        'address'=> $request->address,
+        'password'=> Hash::make($request->password),
+        'role'=> 'instructor',
+        'status'=> '0',
+    ]);
+
+    $notification = array(
+        'message'=>' Instructored Registered Successfully ',
+        'alert-type' => 'success');
+return   redirect()->route('instructor.login')->with($notification);
+   // return('');
+
+}
+
+public function Allinstructor(){
     $allinstructor = User::where('role','instructor')->latest()->get();
     return view('admin.backend.instructor.all_instructor',compact('allinstructor'));
-}// End Method
+}
+// public function UpdateUserStatus(Request $request){
+
+//       $userId =$request->input('user_id');
+//       $ischecked = $request->input('is_checked',0);
+      
+//       $user = User::find($userId);
+//       if($user){
+//          $user->status =  $ischecked;
+//          $user->save();
+//       }
+//  return response()->json(['message'=> 'User Status Updated Successfully']);
+// }
+//Updated  For debug
+public function UpdateUserStatus(Request $request)
+{
+    // Log the request data
+    dd($request->all());
+   // dd($request->all);
+    \Log::info('UpdateUserStatus request:', $request->all());
+
+    $userId = $request->input('user_id');
+    $isChecked = $request->input('is_checked', 0);
+
+    \Log::info('UpdateUserStatus params:', [
+        'userId' => $userId,
+        'isChecked' => $isChecked,
+    ]);
+
+    $user = User::find($userId);
+    if ($user) {
+        $user->status = $isChecked;
+        $user->save();
+   console.log($user);
+        \Log::info('User status updated:', $user->toArray());
+
+        return response()->json(['message' => 'User Status Updated Successfully']);
+    } else {
+        \Log::error('User not found for ID:', $userId);
+        return response()->json(['error' => 'User not found'], 404);
+    }
+}
 }
