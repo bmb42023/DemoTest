@@ -75,6 +75,13 @@ Route::middleware('auth','roles:admin')->group(function(){
     Route::get('/add/category','AddCategory')->name('add.category');
 
    });
+   // Instructor Route 
+   Route::controller(AdminController::class)->group(function(){
+    Route::get('/all/instructor','Allinstructor')->name('all.instructor');
+    Route::get('/add/category','AddCategory')->name('add.category');
+
+   });
+
 
    // Route::get('/admin/change/password', [AdminController::class, 
    // 'AdminChangePassword'])->name('admin.change.password');

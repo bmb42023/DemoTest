@@ -18,22 +18,7 @@
                 <div class="menu-title">Admin Dashbaord</div>
             </a>
         </li>
-     <!-- now not needed  14.2   <li>
-            <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-home-alt'></i>
-                </div>
-                <div class="menu-title">Dashboard</div>
-            </a>
-            <ul>
-                <li> <a href="index.html"><i class='bx bx-radio-circle'></i>Default</a>
-                </li>
-                <li> <a href="index2.html"><i class='bx bx-radio-circle'></i>Alternate</a>
-                </li>
-                <li> <a href="index3.html"><i class='bx bx-radio-circle'></i>Graphical</a>
-                </li>
-            </ul>
-        </li>
-    -->
+  
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
@@ -87,13 +72,12 @@
             <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
                 </div>
-                <div class="menu-title">Components</div>
+                <div class="menu-title">Manage Instructor</div>
             </a>
             <ul>
-                <li> <a href="component-alerts.html"><i class='bx bx-radio-circle'></i>Alerts</a>
+                <li> <a href="{{route('all.instructor')}}"><i class='bx bx-radio-circle'></i>All  Instructor</a>
                 </li>
-                <li> <a href="component-accordions.html"><i class='bx bx-radio-circle'></i>Accordions</a>
-                </li>
+                
             <!--    <li> <a href="component-badges.html"><i class='bx bx-radio-circle'></i>Badges</a>
                 </li>
                 <li> <a href="component-buttons.html"><i class='bx bx-radio-circle'></i>Buttons</a>

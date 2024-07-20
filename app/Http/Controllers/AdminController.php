@@ -153,5 +153,9 @@ class AdminController extends Controller
             'alert-type' => 'success');
   return back()->with($notification);
 
-}
+}   public function AllInstructor(){
+
+    $allinstructor = User::where('role','instructor')->latest()->get();
+    return view('admin.backend.instructor.all_instructor',compact('allinstructor'));
+}// End Method
 }
